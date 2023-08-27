@@ -1,0 +1,11 @@
+for i,v in pairs(game:GetDescendants()) do
+if v:IsA("RemoteEvent") then
+v:FireServer(id)
+if v:IsA("BindableEvent") then
+v:Fire(id)
+if v:IsA("RemoteFunction") then
+v:InvokeServer(id)
+end
+end
+end
+end
